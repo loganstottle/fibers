@@ -30,6 +30,7 @@ void sched() {
 }
 
 void sched_spawn(char* name, void(*fn)(void*), void *arg) {
+  printf("\"%s\" spawned...\n", name);
   queue_push_bottom(&globalq, fiber_create(name, fn, arg));
 }
 

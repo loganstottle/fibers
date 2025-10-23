@@ -19,6 +19,7 @@ ptrdiff_t queue_size(queue_t* q) {
 
 void queue_push_bottom(queue_t* q, fiber_t* f) {
   mtx_lock(&q->lock);
+
   if (queue_size(q) >= (ptrdiff_t)q->capacity - 1) {
     printf("fatal: full run queue %zu/%zu\n", queue_size(q), q->capacity);
     exit(1);

@@ -2,14 +2,14 @@
 #define WORKER_H
 
 #include <threads.h>
+#include <ucontext.h>
 
 #include "queue.h"
-#include "ctx.h"
 
 typedef struct {
   int id;
   thrd_t thread;
-  ctx_t context;
+  ucontext_t context;
   queue_t* globalq;
 } worker_t;
 

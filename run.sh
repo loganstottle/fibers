@@ -1,1 +1,1 @@
-gcc -fno-omit-frame-pointer -O0 -ggdb *.c ctx_amd64 -o main && ./main
+gcc -fno-omit-frame-pointer -O0 -ggdb *.c -o main && ./main

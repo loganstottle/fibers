@@ -8,10 +8,7 @@ int work(void* arg) {
 
   while (true) {
     fiber_t* f = queue_pop_bottom(w->globalq);
-    if (f) {
-      printf("running: %s\n", f->name);
-      fiber_resume(f, w);
-    }
+    if (f) fiber_resume(f, w);
   }
 
   __builtin_unreachable();

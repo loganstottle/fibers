@@ -3,7 +3,7 @@
 
 #include "fiber.h"
 
-#define NUM_WORKERS 8
+#define NUM_WORKERS 1
 
 void fmain();
 void sched();
